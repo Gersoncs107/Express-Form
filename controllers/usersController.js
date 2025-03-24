@@ -6,3 +6,7 @@ exports.usersListGet = (req, res) => {
         users: usersStorage.getUsers()
     })
 }
+
+exports.usersCreateGet = (req, res) => {
+
+}
