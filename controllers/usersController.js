@@ -8,5 +8,7 @@ exports.usersListGet = (req, res) => {
 }
 
 exports.usersCreateGet = (req, res) => {
-
+    res.render("createUser", {
+        title: "Create User"
+    })
 }
