@@ -12,3 +12,7 @@ exports.usersCreateGet = (req, res) => {
         title: "Create User"
     })
 }
+
+exports.usersCreatePost = (req, res) => {
+    const {firstName, lastName} = req.body
+}
