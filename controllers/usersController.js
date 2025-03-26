@@ -1,4 +1,5 @@
 const usersStorage = require("../storages/usersStorage")
+const {body, validationResult} = require("express-validator")
 
 exports.usersListGet = (req, res) => {
     res.render("index",{
