@@ -24,3 +24,5 @@ class UsersStorage {
         delete this.storage[id]
     }
 }
+
+module.exports = new UsersStorage()
