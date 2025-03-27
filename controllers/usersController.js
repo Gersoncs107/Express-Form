@@ -37,6 +37,6 @@ exports.usersCreatePost = (req, res) => {
 exports.usersCreatepost = [
     validateUser,
     (req, res) => {
-
+        const errors = validationResult(req)
     }
 ]
