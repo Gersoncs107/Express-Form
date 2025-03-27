@@ -38,5 +38,15 @@ exports.usersCreatepost = [
     validateUser,
     (req, res) => {
         const errors = validationResult(req)
+        if(!errors.isEmpty){
+            return res.status(400).render("createUser", {
+                title: "Create User",
+                errors: errors.array()
+            })
+        }
+
+        const {firstName, lastName} = req.body
+        usersStorage.addUser({firstName, lastName})
+        res.redirect("/")
     }
 ]
