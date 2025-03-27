@@ -13,6 +13,8 @@ const validateUser = [
       .isLength({ min: 1, max: 10 }).withMessage(`Last name ${lengthErr}`),
   ]
 
+  
+
 exports.usersListGet = (req, res) => {
     res.render("index",{
         title: "User List",
@@ -31,3 +33,10 @@ exports.usersCreatePost = (req, res) => {
     usersStorage.addUser({firstName, lastName})
     res.redirect("/")
 }
+
+exports.usersCreatepost = [
+    validateUser,
+    (req, res) => {
+
+    }
+]
