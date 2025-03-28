@@ -50,3 +50,7 @@ exports.usersCreatepost = [
         res.redirect("/")
     }
 ]
+
+exports.usersUpdateGet = (req, res) => {
+    const users = usersStorage.getUser()
+}

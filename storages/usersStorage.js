@@ -12,7 +12,7 @@ class UsersStorage {
         this.id++
     }
 
-    getUsers(){
+    getUser(){
         return Object.values(this.storage)
     }
 
