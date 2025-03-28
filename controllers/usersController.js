@@ -71,6 +71,9 @@ exports.userUpdatePost= [
                 errors: errors.array() 
             })
         }
+        const {firstName, lastName} = req.body
+        usersStorage.updateUser(req.params.id, {firstName, lastName})
+        res.redirect("/")
     }
     
 ]
