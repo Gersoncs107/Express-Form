@@ -58,3 +58,19 @@ exports.usersUpdateGet = (req, res) => {
         user: user
     })
 }
+
+exports.userUpdatePost= [
+    validateUser, (req, res) => {
+        const users = usersStorage.getUser(req.params.id)
+        const errors = validationResult(req)
+
+        if(!errors.isEmpty()){
+            return res.status(400).render("updateUser", {
+                title: "Update User",
+                user: user,
+                errors: errors.array() 
+            })
+        }
+    }
+    
+]
