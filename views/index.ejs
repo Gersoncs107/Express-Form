@@ -8,10 +8,9 @@
         <ul>
             <% if(locals.users) {%>
               <% users.forEach(user => { %>
-                <li>
-                    ID: <%= user.id %>, Name: <%= user.firstName %> <%= user.lastName %>
-                    <a href="/<%= user.id %>/update">"Update"</a>
-                </li>  
+                <li>ID: <%= user.id %>, Name: <%= user.firstName %> <%= user.lastName %></li>
+                <a href="/<%= user.id %>/update">"Update"</a>
+                <form action="/<%= user.id %>/delete" method="POST" style="display: inline;"></form>
                 <% }) %>
                <% } %> 
         </ul>
