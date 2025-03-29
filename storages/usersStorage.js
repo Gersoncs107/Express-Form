@@ -12,8 +12,8 @@ class UsersStorage {
         this.id++
     }
 
-    getUser(){
-        return Object.values(this.storage)
+    getUser(id){
+        return Object.values(this.storage[id])
     }
 
     updateUser(id, {firstName, lastName}){
