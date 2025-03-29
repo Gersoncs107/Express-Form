@@ -34,7 +34,7 @@ exports.usersCreateGet = (req, res) => {
 //     res.redirect("/")
 // }
 
-exports.usersCreatepost = [
+exports.usersCreatePost = [
     validateUser,
     (req, res) => {
         const errors = validationResult(req)
