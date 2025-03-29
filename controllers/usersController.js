@@ -82,4 +82,3 @@ exports.userDeletePost = (req, res) => {
     usersStorage.deleteUser(req.params.id)
     res.redirect("/")
 }
-console.log("usersCreatePost:", exports.usersCreatePost);
